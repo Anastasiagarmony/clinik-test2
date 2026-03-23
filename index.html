@@ -32,8 +32,6 @@
             --accent-hover: #086a9c;
             --accent-pale: #dcecf8;
             --orange: #efa734;
-            --orange-soft: #f7d6a8;
-            --orange-pale: #fff1dc;
             --border: #dbe4ee;
             --card: #ffffff;
             --shadow: 0 16px 40px rgba(36, 57, 90, 0.08);
@@ -420,10 +418,9 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-width: 290px;
-            max-width: 320px;
+            width: 100%;
             min-height: 58px;
-            padding: 14px 28px;
+            padding: 14px 22px;
             border-radius: 18px;
             background: linear-gradient(180deg, #1a90d1 0%, #0a7db9 100%);
             color: #fff;
@@ -442,7 +439,7 @@
 
         .map-frame {
             width: 100%;
-            height: 340px;
+            height: 260px;
             border: 0;
             border-radius: 20px;
             overflow: hidden;
@@ -629,16 +626,6 @@
 
             .contact-inner-card {
                 padding: 20px;
-            }
-
-            .contact-button-wrap {
-                margin-top: 24px;
-            }
-
-            .contact-button {
-                width: 100%;
-                min-width: 0;
-                max-width: none;
             }
 
             .map-frame {
@@ -962,7 +949,7 @@
 
                         <iframe
                             class="map-frame"
-                            src="https://yandex.ru/map-widget/v1/?ll=40.453950%2C56.419480&z=17&pt=40.453950,56.419480,pm2rdm"
+                            src="https://yandex.ru/map-widget/v1/?text=%D0%B3.%20%D0%A1%D1%83%D0%B7%D0%B4%D0%B0%D0%BB%D1%8C%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%92%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B5%2C%2031&z=17"
                             title="Яндекс Карта"
                             loading="lazy"
                         ></iframe>
