@@ -4,27 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ветеринарная клиника «Доктор Кот» — Суздаль</title>
-    <meta name="description" content="Ветеринарная клиника «Доктор Кот» в Суздале. Точная диагностика, профессиональное лечение и бережное отношение." />
+    <meta
+        name="description"
+        content="Ветеринарная клиника «Доктор Кот» в Суздале. Точная диагностика, профессиональное лечение и бережное отношение."
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;600;700;900&display=swap"
+        rel="stylesheet"
+    />
 
     <style>
         :root {
             --bg: #ffffff;
             --bg-blue: #f4f9fd;
             --bg-blue-soft: #e8f2fa;
-            --bg-blue-card: #dbe9f6;
-            --bg-warm: #fff4e5;
-            --bg-warm-soft: #fff8ef;
+            --bg-blue-card: #dbe9f5;
+            --bg-blue-card-soft: #edf4fa;
+            --bg-warm: #fff7ef;
             --text: #24395a;
-            --text-muted: #66758d;
+            --text-deep: #203246;
+            --text-muted: #65758f;
+            --text-soft: #4e6578;
             --accent: #0a7db9;
-            --accent-hover: #08689a;
-            --accent-soft: #dcecf8;
+            --accent-hover: #086a9c;
+            --accent-pale: #dcecf8;
             --orange: #efa734;
-            --orange-soft: #fff1dc;
+            --orange-pale: #fff1dc;
             --border: #dbe4ee;
             --card: #ffffff;
             --shadow: 0 16px 40px rgba(36, 57, 90, 0.08);
@@ -45,7 +53,10 @@
             html {
                 scroll-behavior: auto;
             }
-            *, *::before, *::after {
+
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
@@ -53,17 +64,20 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: "DM Sans", sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Fraunces', serif;
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Fraunces", serif;
             font-weight: 700;
-            line-height: 1.15;
+            line-height: 1.14;
             color: var(--text);
         }
 
@@ -91,7 +105,7 @@
         }
 
         .nav-link::after {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             bottom: -6px;
@@ -134,7 +148,10 @@
         .hero {
             padding-top: 148px;
             padding-bottom: 84px;
-            background: #fff;
+            background:
+                radial-gradient(circle at 12% 16%, rgba(10, 125, 185, 0.05) 0%, transparent 24%),
+                radial-gradient(circle at 88% 18%, rgba(239, 167, 52, 0.05) 0%, transparent 22%),
+                #ffffff;
         }
 
         .section-blue {
@@ -142,62 +159,56 @@
         }
 
         .section-warm {
-            background: var(--bg-warm-soft);
+            background: var(--bg-warm);
+        }
+
+        .section-header {
+            max-width: 860px;
+            text-align: center;
+            margin: 0 auto 56px;
+        }
+
+        .section-header p {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-badge,
-        .section-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 18px;
-            border-radius: 999px;
-            border: 1px solid var(--border);
-            background: #fff;
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 1.02rem;
-        }
-
-        .hero-badge-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--accent);
-            flex-shrink: 0;
-        }
-
-        .section-badge {
-            background: var(--accent-soft);
-            border-color: transparent;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
+        .section-badge,
         .hero-subline {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            margin-top: 24px;
             padding: 12px 18px;
             border-radius: 999px;
             border: 1px solid var(--border);
             background: #fff;
-            color: var(--text);
             font-weight: 500;
-            font-size: 1.02rem;
+            font-size: 1rem;
+            line-height: 1.2;
         }
 
-        .hero-subline-star {
-            color: var(--orange);
-            font-size: 1rem;
-            line-height: 1;
+        .hero-badge {
+            color: var(--text-muted);
+        }
+
+        .section-badge {
+            background: var(--accent-pale);
+            border-color: transparent;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero-subline {
+            color: var(--text);
+            margin-top: 24px;
+            background: #fff;
         }
 
         .hero-image {
             border-radius: 28px;
             overflow: hidden;
-            background: var(--accent-soft);
+            background: var(--accent-pale);
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
         }
@@ -206,22 +217,40 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top;
+            object-position: center center;
             display: block;
         }
 
         .about-image {
+            position: relative;
             border-radius: 24px;
             overflow: hidden;
             box-shadow: var(--shadow-soft);
             border: 1px solid var(--border);
+            background: #dde8f0;
+        }
+
+        .about-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(0deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)),
+                linear-gradient(0deg, rgba(36, 57, 90, 0.08), rgba(36, 57, 90, 0.08));
+            pointer-events: none;
         }
 
         .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: 60% center;
             display: block;
+        }
+
+        .about-photo-muted {
+            filter: saturate(0.58) brightness(0.96) contrast(0.84) blur(0.6px);
+            transform: scale(1.03);
         }
 
         .feature-item {
@@ -235,7 +264,7 @@
             width: 40px;
             height: 40px;
             border-radius: 12px;
-            background: var(--accent-soft);
+            background: var(--accent-pale);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -261,7 +290,7 @@
         .animal-card:hover,
         .review-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 34px rgba(36, 57, 90, 0.10);
+            box-shadow: 0 16px 34px rgba(36, 57, 90, 0.1);
         }
 
         .service-icon,
@@ -269,7 +298,8 @@
             width: 66px;
             height: 66px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-soft), var(--orange-soft));
+            background: var(--accent-pale);
+            border: 1px solid rgba(10, 125, 185, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -292,12 +322,18 @@
             height: 100%;
         }
 
-        .quote-mark {
-            font-size: 2rem;
-            line-height: 1;
-            color: var(--orange);
-            margin-bottom: 10px;
-            font-family: Georgia, serif;
+        .review-card .review-text {
+            color: var(--text);
+            font-size: 1.04rem;
+            line-height: 1.65;
+            margin-bottom: 16px;
+        }
+
+        .review-card .review-author {
+            color: #8a98ad;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
         }
 
         .contact-card {
@@ -309,8 +345,8 @@
         }
 
         .contact-inner-card {
-            background: rgba(255,255,255,0.22);
-            border: 1px solid rgba(255,255,255,0.35);
+            background: var(--bg-blue-card-soft);
+            border: 1px solid var(--border);
             border-radius: 26px;
             padding: 28px;
         }
@@ -325,37 +361,46 @@
             width: 56px;
             height: 56px;
             border-radius: 16px;
-            background: rgba(255,255,255,0.32);
+            background: rgba(255, 255, 255, 0.55);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
+            color: var(--accent);
             flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.8);
         }
 
         .contact-label {
-            font-size: 1.22rem;
+            font-size: 1.18rem;
             font-weight: 700;
-            color: #fff;
+            color: var(--text-deep);
             line-height: 1.2;
             margin-bottom: 6px;
         }
 
         .contact-value {
-            font-size: 1.1rem;
+            font-size: 1.08rem;
             font-weight: 600;
-            color: #fff;
+            color: var(--text-deep);
             line-height: 1.45;
         }
 
         .contact-note,
         .contact-title,
         .contact-text {
-            color: #fff;
+            color: var(--text-deep);
+        }
+
+        .contact-note {
+            line-height: 1.55;
+        }
+
+        .contact-text {
+            color: var(--text-soft);
         }
 
         .contact-link {
-            color: #fff;
+            color: var(--accent);
             text-decoration: underline;
             text-underline-offset: 4px;
             font-weight: 700;
@@ -371,12 +416,12 @@
         }
 
         .footer {
-            background: #fff;
+            background: var(--bg-blue-card);
             border-top: 1px solid var(--border);
         }
 
         .footer-wordmark {
-            height: 52px;
+            height: 82px;
             width: auto;
             display: block;
         }
@@ -384,7 +429,7 @@
         .mobile-menu {
             position: fixed;
             inset: 0;
-            background: rgba(255,255,255,0.98);
+            background: rgba(255, 255, 255, 0.98);
             z-index: 999;
             display: flex;
             flex-direction: column;
@@ -422,9 +467,17 @@
             transition: all 0.3s ease;
         }
 
-        .hamburger span:nth-child(1) { top: 0; }
-        .hamburger span:nth-child(2) { top: 9px; }
-        .hamburger span:nth-child(3) { bottom: 0; }
+        .hamburger span:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger span:nth-child(2) {
+            top: 9px;
+        }
+
+        .hamburger span:nth-child(3) {
+            bottom: 0;
+        }
 
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg);
@@ -451,10 +504,21 @@
             transform: translateY(0);
         }
 
-        .reveal-delay-1 { transition-delay: 0.08s; }
-        .reveal-delay-2 { transition-delay: 0.16s; }
-        .reveal-delay-3 { transition-delay: 0.24s; }
-        .reveal-delay-4 { transition-delay: 0.32s; }
+        .reveal-delay-1 {
+            transition-delay: 0.08s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.16s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.24s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.32s;
+        }
 
         a:focus-visible,
         button:focus-visible {
@@ -476,7 +540,8 @@
             }
 
             .hero-badge,
-            .hero-subline {
+            .hero-subline,
+            .section-badge {
                 font-size: 0.95rem;
                 padding: 10px 14px;
             }
@@ -497,16 +562,23 @@
             .map-frame {
                 height: 220px;
             }
+
+            .footer-wordmark {
+                height: 72px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="nav" id="navbar" role="navigation" aria-label="Главная навигация">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-24 lg:h-28">
                 <a href="#hero" aria-label="На главную" class="shrink-0">
-                    <img src="484906056_1563723367651038_3460133672474167961_n.jpg" alt="Логотип ветеринарной клиники Доктор Кот" class="h-20 lg:h-24 w-auto object-contain" />
+                    <img
+                        src="484906056_1563723367651038_3460133672474167961_n.jpg"
+                        alt="Логотип ветеринарной клиники Доктор Кот"
+                        class="h-20 lg:h-24 w-auto object-contain"
+                    />
                 </a>
 
                 <div class="hidden lg:flex items-center gap-10">
@@ -518,15 +590,30 @@
                 </div>
 
                 <div class="hidden lg:block">
-                    <a href="tel:+79585106466" class="top-phone-btn" aria-label="Позвонить по номеру +7 958 510 64 66">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <a
+                        href="tel:+79585106466"
+                        class="top-phone-btn"
+                        aria-label="Позвонить в ветеринарную клинику Доктор Кот"
+                    >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
                         </svg>
-                        +7 (958) 510-64-66
+                        <span>+7 (958) 510-64-66</span>
                     </a>
                 </div>
 
-                <button class="hamburger lg:hidden" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+                <button
+                    class="hamburger lg:hidden"
+                    id="hamburger"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
                     <span></span>
                     <span></span>
                     <span></span>
@@ -535,28 +622,36 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu lg:hidden" id="mobileMenu" aria-hidden="true">
         <a href="#about" class="nav-link">О клинике</a>
         <a href="#services" class="nav-link">Услуги</a>
         <a href="#animals" class="nav-link">Кому помогаем</a>
         <a href="#reviews" class="nav-link">Отзывы</a>
         <a href="#contacts" class="nav-link">Контакты</a>
-        <a href="tel:+79585106466" class="top-phone-btn mt-2">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <a
+            href="tel:+79585106466"
+            class="top-phone-btn mt-2"
+            aria-label="Позвонить в ветеринарную клинику Доктор Кот"
+        >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
             </svg>
-            +7 (958) 510-64-66
+            <span>+7 (958) 510-64-66</span>
         </a>
     </div>
 
-    <!-- Hero -->
     <section class="hero" id="hero">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div class="reveal">
                     <div class="hero-badge mb-6">
-                        <span class="hero-badge-dot"></span>
                         <span>Принимаем в Суздале</span>
                     </div>
 
@@ -564,55 +659,77 @@
                         Мы рядом, когда вашему другу нужна помощь
                     </h1>
 
-                    <p class="text-2xl sm:text-[2rem] lg:text-[2.2rem] leading-snug text-[var(--text-muted)] max-w-2xl">
+                    <p
+                        class="text-2xl sm:text-[2rem] lg:text-[2.2rem] leading-snug text-[var(--text-muted)] max-w-2xl"
+                    >
                         Точная диагностика, профессиональное лечение и бережное отношение
                     </p>
 
                     <div class="hero-subline">
-                        <span class="hero-subline-star">★</span>
                         <span>Помогаем всем домашним животным</span>
                     </div>
                 </div>
 
                 <div class="reveal reveal-delay-1">
                     <div class="hero-image aspect-[4/5] max-w-[520px] ml-auto">
-                        <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?w=900&h=1100&fit=crop" alt="Женщина и кошка" loading="eager" />
+                        <img src="hero_woman_cat.png" alt="Женщина с кошкой" loading="eager" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About -->
     <section class="py-20 lg:py-28 section-warm" id="about">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-header">
+                <div class="section-badge reveal">О клинике</div>
+                <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl mb-5">
+                    Бережная помощь и внимание к каждому пациенту
+                </h2>
+            </div>
+
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                <div class="reveal order-2 lg:order-1">
-                    <div class="about-image aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?w=900&h=700&fit=crop" alt="Приём в ветеринарной клинике" loading="lazy" />
+                <div class="reveal reveal-delay-2 order-2 lg:order-1">
+                    <div class="about-image aspect-[5/4]">
+                        <img
+                            src="about_woman_dog_boxes.png"
+                            alt="Врач с собакой на фоне стационара"
+                            loading="lazy"
+                            class="about-photo-muted"
+                        />
                     </div>
                 </div>
 
                 <div class="order-1 lg:order-2">
-                    <div class="section-badge mb-4 reveal">О клинике</div>
-
-                    <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl mb-6 max-w-xl">
-                        Бережная помощь и внимание к каждому пациенту
-                    </h2>
-
                     <p class="reveal reveal-delay-2 text-lg text-[var(--text-muted)] mb-5">
-                        Ветеринарная клиника «Доктор Кот» принимает пациентов в Суздале. Здесь можно записаться на первичный приём, пройти диагностику, УЗИ, рентген, получить стоматологическую и хирургическую помощь.
+                        Клиника помогает кошкам, собакам, кроликам, птицам и другим домашним
+                        животным. Здесь можно пройти диагностику и получить терапевтическую,
+                        стоматологическую и хирургическую помощь.
                     </p>
 
                     <p class="reveal reveal-delay-3 text-lg text-[var(--text-muted)] mb-8">
-                        Подробно объясняем диагноз и дальнейшие шаги, чтобы лечение было понятным и спокойным для владельца и животного.
+                        Врач подробно объясняет диагноз, варианты лечения и дальнейшие шаги,
+                        чтобы решение было понятным и спокойным для владельца.
                     </p>
 
                     <div class="reveal reveal-delay-4 grid sm:grid-cols-2 gap-4">
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path
+                                        d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <polyline
+                                        points="22 4 12 14.01 9 11.01"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
                                 </svg>
                             </div>
                             <span>Современное оборудование</span>
@@ -621,7 +738,20 @@
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path
+                                        d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <polyline
+                                        points="22 4 12 14.01 9 11.01"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
                                 </svg>
                             </div>
                             <span>Понятный план лечения</span>
@@ -630,19 +760,45 @@
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path
+                                        d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <polyline
+                                        points="22 4 12 14.01 9 11.01"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
                                 </svg>
                             </div>
-                            <span>Онлайн-запись и запись по телефону</span>
+                            <span>Узкая специализация врачей</span>
                         </div>
 
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                    <path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path
+                                        d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <polyline
+                                        points="22 4 12 14.01 9 11.01"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
                                 </svg>
                             </div>
-                            <span>Послеоперационное наблюдение</span>
+                            <span>Послеоперационный стационар</span>
                         </div>
                     </div>
                 </div>
@@ -650,11 +806,10 @@
         </div>
     </section>
 
-    <!-- Services -->
     <section class="py-20 lg:py-28 bg-white" id="services">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14">
-                <div class="section-badge mb-4 reveal">Услуги</div>
+            <div class="section-header">
+                <div class="section-badge reveal">Услуги</div>
                 <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl mb-5">
                     Основные направления помощи
                 </h2>
@@ -667,11 +822,10 @@
         </div>
     </section>
 
-    <!-- Animals -->
     <section class="py-20 lg:py-28 section-blue" id="animals">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14">
-                <div class="section-badge mb-4 reveal">Кому помогаем</div>
+            <div class="section-header">
+                <div class="section-badge reveal">Кому помогаем</div>
                 <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl mb-5">
                     Домашние животные, которых мы принимаем
                 </h2>
@@ -681,11 +835,10 @@
         </div>
     </section>
 
-    <!-- Reviews -->
     <section class="py-20 lg:py-28 bg-white" id="reviews">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14">
-                <div class="section-badge mb-4 reveal">Отзывы</div>
+            <div class="section-header">
+                <div class="section-badge reveal">Отзывы</div>
                 <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl mb-5">
                     Что говорят о клинике
                 </h2>
@@ -695,16 +848,21 @@
         </div>
     </section>
 
-    <!-- Contacts -->
     <section class="py-20 lg:py-28 section-warm" id="contacts">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="contact-card reveal">
+            <div class="section-header">
+                <div class="section-badge reveal">Контакты и запись</div>
+                <h2 class="reveal reveal-delay-1 text-3xl sm:text-4xl lg:text-5xl mb-5">
+                    Связаться с клиникой и записаться на приём
+                </h2>
+                <p class="reveal reveal-delay-2 text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
+                    Телефон, адрес, режим работы и онлайн-запись
+                </p>
+            </div>
+
+            <div class="contact-card reveal reveal-delay-2">
                 <div class="grid lg:grid-cols-2 gap-10">
                     <div>
-                        <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-4 contact-title">
-                            Контакты и запись
-                        </h2>
-
                         <p class="text-xl mb-8 contact-note">
                             Записаться на приём можно онлайн или по телефону
                         </p>
@@ -713,20 +871,34 @@
                             <div class="contact-item">
                                 <div class="contact-icon">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
                                     </svg>
                                 </div>
                                 <div>
                                     <div class="contact-label">Телефон</div>
-                                    <a href="tel:+79585106466" class="contact-value hover:underline">+7 (958) 510-64-66</a>
+                                    <a href="tel:+79585106466" class="contact-value hover:underline">
+                                        +7 (958) 510-64-66
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="contact-item">
                                 <div class="contact-icon">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                        <path
+                                            d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
                                     </svg>
                                 </div>
                                 <div>
@@ -738,8 +910,14 @@
                             <div class="contact-item">
                                 <div class="contact-icon">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                        <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                        <path
+                                            d="M12 6v6l4 2"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
                                     </svg>
                                 </div>
                                 <div>
@@ -751,16 +929,19 @@
                         </div>
 
                         <div class="mt-8">
-                            <a href="https://animalface.vet/components/online/key:3f67fd97162d20e6fe27748b5b372509" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <a
+                                href="https://animalface.vet/components/online/key:3f67fd97162d20e6fe27748b5b372509"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-link"
+                            >
                                 Онлайн-запись
                             </a>
                         </div>
                     </div>
 
                     <div class="contact-inner-card">
-                        <h3 class="text-2xl sm:text-3xl mb-4 contact-title">
-                            Как нас найти
-                        </h3>
+                        <h3 class="text-2xl sm:text-3xl mb-4 contact-title">Как нас найти</h3>
 
                         <p class="text-lg mb-6 contact-text">
                             Расположены в том же доме, что и магазин «Пятёрочка», вход со двора
@@ -770,23 +951,31 @@
                             class="map-frame"
                             src="https://yandex.ru/map-widget/v1/?text=%D0%B3.%20%D0%A1%D1%83%D0%B7%D0%B4%D0%B0%D0%BB%D1%8C%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%92%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B5%2C%2031&z=17"
                             title="Яндекс Карта"
-                            loading="lazy">
-                        </iframe>
+                            loading="lazy"
+                        ></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-5">
-                <img src="doktorkot_wordmark_clean2.png" alt="ДокторКот" class="footer-wordmark" />
+                <img src="doktorkot_wordmark_exact.png" alt="ДокторКот" class="footer-wordmark" />
                 <div class="text-[var(--text-muted)] text-base">© 2026</div>
-                <a href="tel:+79585106466" class="inline-flex items-center gap-2 text-[var(--text)] font-semibold hover:text-[var(--accent)] transition-colors">
+                <a
+                    href="tel:+79585106466"
+                    class="inline-flex items-center gap-2 text-[var(--text)] font-semibold hover:text-[var(--accent)] transition-colors"
+                >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.58 2.8.7A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
                     </svg>
                     +7 (958) 510-64-66
                 </a>
@@ -797,77 +986,77 @@
     <script>
         const services = [
             {
-                icon: 'stethoscope',
-                name: 'Первичный приём',
-                desc: 'Осмотр, консультация и первичная оценка состояния животного'
+                icon: "stethoscope",
+                name: "Первичный приём",
+                desc: "Осмотр, консультация и первичная оценка состояния животного",
             },
             {
-                icon: 'scan',
-                name: 'Диагностика',
-                desc: 'Точный разбор симптомов и план дальнейших действий'
+                icon: "scan",
+                name: "Диагностика",
+                desc: "Точный разбор симптомов и план дальнейших действий",
             },
             {
-                icon: 'flask',
-                name: 'Анализы',
-                desc: 'Лабораторные исследования для уточнения диагноза'
+                icon: "flask",
+                name: "Анализы",
+                desc: "Лабораторные исследования для уточнения диагноза",
             },
             {
-                icon: 'ultrasound',
-                name: 'УЗИ',
-                desc: 'Ультразвуковая диагностика внутренних органов'
+                icon: "ultrasound",
+                name: "УЗИ",
+                desc: "Ультразвуковая диагностика внутренних органов",
             },
             {
-                icon: 'xray',
-                name: 'Рентген',
-                desc: 'Исследование костей, суставов и внутренних структур'
+                icon: "xray",
+                name: "Рентген",
+                desc: "Исследование костей, суставов и внутренних структур",
             },
             {
-                icon: 'scissors',
-                name: 'Хирургия',
-                desc: 'Базовые хирургические процедуры и наблюдение после вмешательства'
+                icon: "scissors",
+                name: "Хирургия",
+                desc: "Базовые хирургические процедуры и наблюдение после вмешательства",
             },
             {
-                icon: 'heart',
-                name: 'Стерилизация и кастрация',
-                desc: 'Операции с современным наркозом и послеоперационным наблюдением'
+                icon: "heart",
+                name: "Стерилизация и кастрация",
+                desc: "с современным наркозом<br>и послеоперационным<br>наблюдением",
             },
             {
-                icon: 'tooth',
-                name: 'Стоматология',
-                desc: 'Осмотр, чистка и лечение зубов'
-            }
+                icon: "tooth",
+                name: "Стоматология",
+                desc: "Осмотр, чистка и лечение зубов",
+            },
         ];
 
         const animals = [
-            { icon: 'cat', name: 'Кошки' },
-            { icon: 'dog', name: 'Собаки' },
-            { icon: 'rabbit', name: 'Кролики' },
-            { icon: 'bird', name: 'Птицы' },
-            { icon: 'rodent', name: 'Грызуны' },
-            { icon: 'paw', name: 'Другие домашние животные' }
+            { icon: "cat", name: "Кошки" },
+            { icon: "dog", name: "Собаки" },
+            { icon: "rabbit", name: "Кролики" },
+            { icon: "bird", name: "Птицы" },
+            { icon: "rodent", name: "Грызуны" },
+            { icon: "paw", name: "Другие домашние животные" },
         ];
 
         const reviews = [
             {
-                quote: '«Отношение ко всем пациентам — трепетное, с любовью и вниманием»',
-                author: 'Наталия Преображенская'
+                quote: "Отношение к животным спокойное и бережное",
+                author: "Наталия П.",
             },
             {
-                quote: '«Пса от последствий укуса клеща откачали»',
-                author: 'Ксения Савина'
+                quote: "Подробно объяснили диагноз и план лечения",
+                author: "Ксения С.",
             },
             {
-                quote: '«После операции можно оставить животное на реабилитацию в стационаре»',
-                author: 'Ольга Смирнова'
+                quote: "Помогли даже в конце рабочего дня",
+                author: "Светлана С.",
             },
             {
-                quote: '«Позвонили — нам сразу сказали: приезжайте»',
-                author: 'kapten-kuk'
+                quote: "В клинике есть всё необходимое для диагностики",
+                author: "Татьяна Н.",
             },
             {
-                quote: '«Современное оборудование. Есть все необходимые лекарства»',
-                author: 'Татьяна Новикова'
-            }
+                quote: "Врач очень внимательно обращается с питомцем",
+                author: "Николай А.",
+            },
         ];
 
         const icons = {
@@ -963,13 +1152,15 @@
             `,
             rodent: `
                 <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <circle cx="8" cy="8" r="2.6" stroke="currentColor" stroke-width="2"/>
-                    <circle cx="16" cy="8" r="2.6" stroke="currentColor" stroke-width="2"/>
-                    <path d="M6.2 11.5c0-2.2 2.6-4 5.8-4s5.8 1.8 5.8 4V14c0 3.2-2.6 5.5-5.8 5.5S6.2 17.2 6.2 14v-2.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                    <circle cx="10" cy="13" r="0.7" fill="currentColor"/>
-                    <circle cx="14" cy="13" r="0.7" fill="currentColor"/>
-                    <path d="M11.2 15.3h1.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M11.3 16.1v2M12.7 16.1v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M9.1 8.4 8.3 6.2a1.5 1.5 0 0 1 1.1-2 1.6 1.6 0 0 1 1.8.8l.6 1.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.9 8.4l.8-2.2a1.5 1.5 0 0 0-1.1-2 1.6 1.6 0 0 0-1.8.8l-.6 1.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.3 11.2c0-2.8 2.1-4.8 4.7-4.8s4.7 2 4.7 4.8v1.8c0 3-2.1 5.8-4.7 5.8s-4.7-2.8-4.7-5.8v-1.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M10 11.8h.01M14 11.8h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                    <path d="M11.1 13.8h1.8L12 14.8l-.9-1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M8.8 13.8l-1.8.4M8.9 15.2l-1.7.8M15.2 13.8l1.8.4M15.1 15.2l1.7.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 14.8v1.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M9.8 16.2c.7.7 1.4 1 2.2 1s1.5-.3 2.2-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M10.8 16.3v2.5M13.2 16.3v2.5M10.8 18.8h2.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             `,
             paw: `
@@ -980,24 +1171,24 @@
                     <ellipse cx="15" cy="6.8" rx="1.6" ry="2.1" stroke="currentColor" stroke-width="2"/>
                     <ellipse cx="19" cy="9" rx="1.6" ry="2.1" stroke="currentColor" stroke-width="2"/>
                 </svg>
-            `
+            `,
         };
 
-        const servicesGrid = document.getElementById('servicesGrid');
+        const servicesGrid = document.getElementById("servicesGrid");
         services.forEach((service, index) => {
-            const card = document.createElement('div');
+            const card = document.createElement("div");
             card.className = `service-card reveal reveal-delay-${Math.min((index % 4) + 1, 4)}`;
             card.innerHTML = `
                 <div class="service-icon">${icons[service.icon]}</div>
                 <h3 class="text-xl mb-2">${service.name}</h3>
-                <p class="text-[var(--text-muted)]">${service.desc}</p>
+                <p class="text-[var(--text-muted)] leading-7">${service.desc}</p>
             `;
             servicesGrid.appendChild(card);
         });
 
-        const animalsGrid = document.getElementById('animalsGrid');
+        const animalsGrid = document.getElementById("animalsGrid");
         animals.forEach((animal, index) => {
-            const card = document.createElement('div');
+            const card = document.createElement("div");
             card.className = `animal-card reveal reveal-delay-${Math.min((index % 4) + 1, 4)}`;
             card.innerHTML = `
                 <div class="animal-icon mx-auto">${icons[animal.icon]}</div>
@@ -1006,74 +1197,77 @@
             animalsGrid.appendChild(card);
         });
 
-        const reviewsGrid = document.getElementById('reviewsGrid');
+        const reviewsGrid = document.getElementById("reviewsGrid");
         reviews.forEach((review, index) => {
-            const card = document.createElement('div');
+            const card = document.createElement("div");
             card.className = `review-card reveal reveal-delay-${Math.min((index % 4) + 1, 4)}`;
             card.innerHTML = `
-                <div class="quote-mark">“</div>
-                <p class="text-lg text-[var(--text)] mb-5">${review.quote}</p>
-                <div class="font-bold text-[var(--accent)]">${review.author}</div>
+                <p class="review-text">${review.quote}</p>
+                <div class="review-author">${review.author}</div>
             `;
             reviewsGrid.appendChild(card);
         });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -30px 0px'
-        });
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -30px 0px",
+            }
+        );
 
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+        document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
             if (window.pageYOffset > 24) {
-                navbar.classList.add('scrolled');
+                navbar.classList.add("scrolled");
             } else {
-                navbar.classList.remove('scrolled');
+                navbar.classList.remove("scrolled");
             }
         });
 
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('open');
-            const isOpen = mobileMenu.classList.contains('open');
-            hamburger.setAttribute('aria-expanded', String(isOpen));
-            mobileMenu.setAttribute('aria-hidden', String(!isOpen));
-            document.body.style.overflow = isOpen ? 'hidden' : '';
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            mobileMenu.classList.toggle("open");
+            const isOpen = mobileMenu.classList.contains("open");
+            hamburger.setAttribute("aria-expanded", String(isOpen));
+            mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+            document.body.style.overflow = isOpen ? "hidden" : "";
         });
 
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('open');
-                hamburger.setAttribute('aria-expanded', 'false');
-                mobileMenu.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                mobileMenu.classList.remove("open");
+                hamburger.setAttribute("aria-expanded", "false");
+                mobileMenu.setAttribute("aria-hidden", "true");
+                document.body.style.overflow = "";
             });
         });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                const href = this.getAttribute("href");
+                if (href !== "#") {
                     e.preventDefault();
                     const target = document.querySelector(href);
                     if (target) {
                         const navHeight = navbar.offsetHeight;
-                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 8;
+                        const targetPosition =
+                            target.getBoundingClientRect().top + window.pageYOffset - navHeight - 8;
                         window.scrollTo({
                             top: targetPosition,
-                            behavior: 'smooth'
+                            behavior: "smooth",
                         });
                     }
                 }
