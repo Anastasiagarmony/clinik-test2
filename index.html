@@ -447,37 +447,27 @@
             background: #eef5fb;
         }
 
-        .mobile-map-fallback {
+        .mobile-map-link {
             display: none;
-            text-decoration: none;
-            border-radius: 20px;
-            background: linear-gradient(180deg, #ffffff 0%, #f5f9fd 100%);
-            border: 1px solid var(--border);
-            padding: 22px;
-            color: var(--text);
-            box-shadow: var(--shadow-soft);
-        }
-
-        .mobile-map-fallback .map-fallback-title {
-            font-weight: 700;
+            margin-top: 14px;
             color: var(--accent);
-            margin-bottom: 8px;
-            font-size: 1.02rem;
-        }
-
-        .mobile-map-fallback .map-fallback-text {
-            color: var(--text-soft);
-            line-height: 1.5;
-            font-size: 0.98rem;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 4px;
         }
 
         .footer {
-            background: var(--bg-blue-card);
-            border-top: 1px solid var(--border);
+            padding: 28px 16px 36px;
+            background: transparent;
         }
 
-        .footer-inner {
+        .footer-shell {
             max-width: 980px;
+            margin: 0 auto;
+            background: var(--bg-blue-card);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 26px 32px;
         }
 
         .footer-wordmark {
@@ -629,11 +619,16 @@
             }
 
             .map-frame {
-                display: none;
+                height: 220px;
             }
 
-            .mobile-map-fallback {
-                display: block;
+            .mobile-map-link {
+                display: inline-block;
+            }
+
+            .footer-shell {
+                padding: 22px 20px;
+                border-radius: 22px;
             }
 
             .footer-wordmark {
@@ -955,15 +950,12 @@
                         ></iframe>
 
                         <a
-                            class="mobile-map-fallback"
+                            class="mobile-map-link"
                             href="https://yandex.ru/maps/?text=%D0%A1%D1%83%D0%B7%D0%B4%D0%B0%D0%BB%D1%8C%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%92%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B5%2C%2031"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <div class="map-fallback-title">Открыть маршрут в Яндекс Картах</div>
-                            <div class="map-fallback-text">
-                                Если встроенная карта на телефоне не загружается, маршрут откроется в приложении или браузере
-                            </div>
+                            Открыть карту в Яндекс Картах
                         </a>
                     </div>
                 </div>
@@ -971,8 +963,8 @@
         </div>
     </section>
 
-    <footer class="footer py-8">
-        <div class="footer-inner mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="footer">
+        <div class="footer-shell">
             <div class="flex flex-col md:flex-row items-center justify-between gap-5">
                 <img src="doktorkot_wordmark_exact.png" alt="ДокторКот" class="footer-wordmark" />
                 <div class="text-[var(--text-muted)] text-base">© 2026</div>
