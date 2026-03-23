@@ -457,21 +457,13 @@
         }
 
         .footer {
-            padding: 28px 16px 36px;
-            background: transparent;
-        }
-
-        .footer-shell {
-            max-width: 980px;
-            margin: 0 auto;
             background: var(--bg-blue-card);
-            border: 1px solid var(--border);
-            border-radius: 28px;
-            padding: 26px 32px;
+            border-top: 1px solid var(--border);
+            padding: 14px 0;
         }
 
         .footer-wordmark {
-            height: 82px;
+            height: 56px;
             width: auto;
             display: block;
         }
@@ -626,13 +618,12 @@
                 display: inline-block;
             }
 
-            .footer-shell {
-                padding: 22px 20px;
-                border-radius: 22px;
+            .footer {
+                padding: 12px 0;
             }
 
             .footer-wordmark {
-                height: 72px;
+                height: 48px;
             }
         }
     </style>
@@ -964,8 +955,8 @@
     </section>
 
     <footer class="footer">
-        <div class="footer-shell">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                 <img src="doktorkot_wordmark_exact.png" alt="ДокторКот" class="footer-wordmark" />
                 <div class="text-[var(--text-muted)] text-base">© 2026</div>
                 <a
